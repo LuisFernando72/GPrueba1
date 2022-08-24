@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="library/cdnjs/sweetalert2.min.js"></script>
+    <script src="library/fontawesome-free-6.1.2-web/js/all.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/82af7fe597.js" crossorigin="anonymous"></script> -->
+    <script src="js/jqueri3.6.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="info-container" id="InfoCont">
+        <!-- <div class="container-form"> -->
+        <div class="btn_cancelar" title="Cancelar">
+          <i class="fa-solid fa-circle-xmark ex"></i>
+        </div>
+        <header>
+          Ficha técnica de clientes y programa(s) de entrenamiento sugerido(s)
+        </header>
+        <div class="progress-bar">
+          <div class="paso">
+            <p>Información General </p>
+            <div class="num"><span>1</span></div>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="paso">
+            <p>Historial Clinico 1</p>
+            <div class="num"><span>2</span></div>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="paso">
+            <p>Historial Clinico 2</p>
+            <div class="num"><span>3</span></div>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="paso">
+            <p>Condición energía</p>
+            <div class="num"><span>4</span></div>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="paso">
+            <p>Control de Nutición</p>
+            <div class="num"><span>5</span></div>
+            <div class="check">
+              <!-- <i class="fa-solid fa-file-circle-check"></i> -->
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="paso">
+            <p>Medidad Corporales</p>
+            <div class="num"><span>6</span></div>
+            <div class="check">
+              <!-- <i class="fa-solid fa-file-circle-check"></i> -->
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-princi">
+          <form action="#">
+            <!-- PAGINA NO 1 DATOS GENERALES -->
+            <div class="pagina movPag">
+              <!-- <div id="Layer1" style="width:100px; height:115px; overflow: scroll;"></div> -->
+              <div class="gridpagina">
+                <div class="titulo bloc3">Datos Generales</div>
+
+                <!-- Nombres -->
+                <div class="campo">
+                  <div class="label">
+                    Nombres <b class="error" id="nombres-error"></b>
+                  </div>
+                  <input type="text" id="nombres" placeholder="Nombres" />
+                </div>
+                <!-- Apellidos -->
+                <div class="campo">
+                  <div class="label">
+                    Apellidos <b class="error" id="apellido1-error"></b>
+                  </div>
+                  <input
+                    type="text"
+                    id="apellido1"
+                    placeholder="Apellidos"
+                  />
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="campo">
+                  <div class="label">
+                    Correo Electrónico
+                    <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input
+                    type="text"
+                    id="apellido2"
+                    placeholder="Correo Electrónico"
+                  />
+                </div>
+                  <!-- Fecha Nacimiento -->
+                  <div class="campo">
+                    <div class="label">
+                      Fecha Nacimiento <b class="error" id="apellido2-error"></b>
+                    </div>
+                    <input
+                      type="date"
+                      id="apellido2"
+                      placeholder="Apellido Materno"
+                    />
+                  </div>
+                
+                 
+                <!-- Estatura -->
+                <div class="campo">
+                  <div class="label">
+                    Estatura
+                    <b class="error" id="apellido2-error"  ></b>
+                  </div>
+                  <input type="number" id="apellido2" pattern="^[0-9]+" min="1" step="0.01" placeholder="Estatura" />
+                </div>
+                
+             
+                <!-- Teléfono -->
+                <div class="campo">
+                  <div class="label">
+                    No. Teléfono
+                    <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input
+                    type="text"
+                    id="apellido2"
+                    placeholder="No. Teléfono"
+                  />
+                </div>
+              </div>
+                <div class="grid3">
+                <!-- Sexo -->
+                <div class="campo">
+                  <div class="label">
+                    Sexo<b class="error" id="sexo-error"></b>
+                  </div>
+                  <select name="sexo" id="sexo">
+                    <option value="-1" disabled selected>
+                      Escoge una opcion
+                    </option>
+                    <option value="0">Masculino</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Otro</option>
+                  </select>
+                </div>
+
+                <!-- Edad -->
+                <div class="campo">
+                  <div class="label">
+                    Edad
+                    <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input type="number" id="apellido2" placeholder="Edad" readonly />
+                </div>
+              
+                <!-- Fecha Inicio -->
+                <div class="campo">
+                  <div class="label">
+                    Fecha Inicio <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input
+                    type="date"
+                    id="apellido2"
+                    placeholder="Apellido Materno"
+                  />
+                </div>
+              </div>
+              <div class="grid3">
+                <div class="titulo bloc3">Datos Emergencia</div>
+
+                <!-- Nombres -->
+                <div class="campo">
+                  <div class="label">
+                    Nombres <b class="error" id="nombres-error"></b>
+                  </div>
+                  <input type="text" id="nombres" placeholder="Nombres" />
+                </div>
+
+                <!-- Apellidos -->
+                <div class="campo">
+                  <div class="label">
+                    Apellidos <b class="error" id="apellido1-error"></b>
+                  </div>
+                  <input type="text" id="apellido1" placeholder="Apellidos" />
+                </div>
+
+                <!-- Teléfono -->
+                <div class="campo">
+                  <div class="label">
+                    No. Teléfono<b class="error" id="fechaNac-error"></b>
+                  </div>
+                  <input type="text" id="fechaNac" placeholder="No. Telefono" />
+                </div>
+
+                <div class="campo sigPag bloc3"><button>Siguiente</button></div>
+              </div>
+            </div>
+            <!-- FIN FORM -->
+
+            <!-- PAGINA NO 2 HISTORIAL CLINICO 1   -->
+            <div class="pagina">
+              <div class="gridpagina">
+                <div class="titulo bloc3">Historial Clínico - Parte 1</div>
+
+                <!-- Pregunta 1 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    1) Problemas de corazón, dolor recurrente en el pecho o
+                    brazo.
+                    <b class="error" id="correo-error"></b>
+                  </div>
+                  <input type="radio" name="radio1" id="si1" />
+                  <label class="lblPregunta" for="si1">Si</label>
+                  <input
+                    type="radio"
+                    name="radio1"
+                    id="no1"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no1">No</label>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    2)Le ha sido diagnosticado(a) hipertension o toma
+                    medicamento para ello.<b
+                      class="error"
+                      id="numCel-error"
+                    ></b>
+                  </div>
+                  <input type="radio" name="radio2" id="si2" />
+                  <label class="lblPregunta" for="si2">Si</label>
+                  <input
+                    type="radio"
+                    name="radio2"
+                    id="no2"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no2">No</label>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    3) Problemas respiratorios (asma, sintomas de asfixia o
+                    falta de aire)<b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio3" id="si3" />
+                  <label class="lblPregunta" for="si3">Si</label>
+                  <input
+                    type="radio"
+                    name="radio3"
+                    id="no3"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no3">No</label>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    4) Diabetes o altos niveles de glucosa en la sangre.<b
+                      class="error"
+                      id="numCel-error"
+                    ></b>
+                  </div>
+                  <input type="radio" name="radio4" id="si4" />
+                  <label class="lblPregunta" for="si4">Si</label>
+                  <input
+                    type="radio"
+                    name="radio4"
+                    id="no4"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no4">No</label>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    5) Problemas Neurológicos, (mareos, migraña cafelas, dolores
+                    de cabeza frecuentes, etc).
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio5" id="si5" />
+                  <label class="lblPregunta" for="si5">Si</label>
+                  <input
+                    type="radio"
+                    name="radio5"
+                    id="no5"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no5">No</label>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    6) Problemas gastrointestinales o digestivos (gastritis,
+                    colitis, estreñimiento, etc).
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio6" id="si6" />
+                  <label class="lblPregunta" for="si6">Si</label>
+                  <input
+                    type="radio"
+                    name="radio6"
+                    id="no6"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no6">No</label>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    7) Problemas articulares, musculares o alguna limitación
+                    física <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio7" id="si7" />
+                  <label class="lblPregunta" for="si7">Si</label>
+                  <input
+                    type="radio"
+                    name="radio7"
+                    id="no7"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no7">No</label>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    8) Problemas relacionados al exceso de grasa corporal
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio8" id="si8" />
+                  <label class="lblPregunta" for="si8">Si</label>
+                  <input
+                    type="radio"
+                    name="radio8"
+                    id="no8"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no8">No</label>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    9) Alergias
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio9" id="si9" />
+                  <label class="lblPregunta" for="si9">Si</label>
+                  <input
+                    type="radio"
+                    name="radio9"
+                    id="no9"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no9">No</label>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    10) Algún tipo de cancer (no de piel)
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio10" id="si10" />
+                  <label class="lblPregunta" for="si10">Si</label>
+                  <input
+                    type="radio"
+                    name="radio10"
+                    id="no10"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no10">No</label>
+                </div>
+
+            
+
+                <div class="campo btns bloc3">
+                  <button class="volver-pag1 volver">Atras</button>
+                  <button class="adelante-pag3 adelante">Siguiente</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAGINA NO 3 HISTORIAL CLINICO 2 -->
+            <div class="pagina pagHistorial">
+              <div class="gridpagina">
+                <div class="titulo bloc3">Historial Clínico - Parte 2</div>
+                    <!-- Pregunta 11 -->
+                    <div class="campo-pregunta">
+                      <div class="label">
+                        11) ¿Fuma? <b class="error" id="numCel-error"></b>
+                      </div>
+                      <input type="radio" name="radio11" id="si11" />
+                      <label class="lblPregunta" for="si11">Si</label>
+                      <input
+                        type="radio"
+                        name="radio11"
+                        id="no11"
+                        checked="checked"
+                      />
+                      <label class="lblPregunta" for="no11">No</label>
+                    </div>
+    
+                    <!-- Pregunta 12 -->
+                    <div class="campo-pregunta">
+                      <div class="label">
+                        12) ¿Cosume alcohol frecuentemente?
+                        <b class="error" id="numCel-error"></b>
+                      </div>
+                      <input type="radio" name="radio12" id="si12" />
+                      <label class="lblPregunta" for="si12">Si</label>
+                      <input
+                        type="radio"
+                        name="radio12"
+                        id="no12"
+                        checked="checked"
+                      />
+                      <label class="lblPregunta" for="no12">No</label>
+                    </div>
+                <!-- Pregunta 13 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    13) ¿Consume algun tipo de droga (aún con prescripción
+                    medica)?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio13" id="si13" />
+                  <label class="lblPregunta" for="si13">Si</label>
+                  <input
+                    type="radio"
+                    name="radio13"
+                    id="no13"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no13">No</label>
+                </div>
+
+                <!-- Pregunta 14 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    14) ¿Toma medicamentos?.
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio14" id="si14" />
+                  <label class="lblPregunta" for="si14">Si</label>
+                  <input
+                    type="radio"
+                    name="radio14"
+                    id="no14"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no14">No</label>
+                </div>
+                <!-- Pregunta 15 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    15) Cirugia reciente(últimos 12 meses).
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio15" id="si15" />
+                  <label class="lblPregunta" for="si15">Si</label>
+                  <input
+                    type="radio"
+                    name="radio15"
+                    id="no15"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no15">No</label>
+                </div>
+
+                <!-- Pregunta 16 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    16) ¿Hernia u otra condición que se pueda agravar con el
+                    ejercicio?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio16" id="si16" />
+                  <label class="lblPregunta" for="si16">Si</label>
+                  <input
+                    type="radio"
+                    name="radio16"
+                    id="no16"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no16">No</label>
+                </div>
+
+                <!-- Pregunta 17 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    17) ¿Hace ejercicio regularmente? .
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio17" id="si17" />
+                  <label class="lblPregunta" for="si17">Si</label>
+                  <input
+                    type="radio"
+                    name="radio17"
+                    id="no17"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no17">No</label>
+                </div>
+
+                <!-- Pregunta 18 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    18) ¿Toma vitaminas o algún suplemento alimenticio?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio18" id="si18" />
+                  <label class="lblPregunta" for="si18">Si</label>
+                  <input
+                    type="radio"
+                    name="radio18"
+                    id="no18"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no18">No</label>
+                </div>
+
+                <!-- Pregunta 19  -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    19) ¿Duerme lo suficiente?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio19" id="si2" />
+                  <label class="lblPregunta" for="si19">Si</label>
+                  <input
+                    type="radio"
+                    name="radio19"
+                    id="no19"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no19">No</label>
+                </div>
+
+                <!-- Pregunta 20 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    20) ¿Recomendación medica contraindicada del ejercicio por
+                    alguna razon o diagnótico reciente?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio20" id="si20" />
+                  <label class="lblPregunta" for="si20">Si</label>
+                  <input
+                    type="radio"
+                    name="radio20"
+                    id="no20"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no20">No</label>
+                </div>
+
+                <br />
+
+                <!-- Observaciones -->
+                <div class="campo-pregunta bloc3">
+                  <div class="label">
+                    Observaciones<b class="error" id="numCel-error"></b>
+                  </div>
+                  <textarea id="observaciones" rows="3"></textarea>
+                </div>
+
+                <div class="campo btns bloc3">
+                  <button class="volver-pag2 volver">Atras</button>
+                  <button class="adelante-pag4 adelante">Siguiente</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAGINA NO 4 CONDICIONES DE ENERGIA -->
+            <div class="pagina">
+              <div class="gridpagina">
+                <div class="titulo bloc3">Condiciones de energía</div>
+                
+                <!-- Pregunta 21 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    21) ¿Esta usted embarazada, lactando o considera la
+                    posibilidad de estarlo?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio21" id="si21" />
+                  <label class="lblPregunta" for="si21">Si</label>
+                  <input
+                    type="radio"
+                    name="radio21"
+                    id="no21"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no21">No</label>
+                </div>
+
+                <!-- Pregunta 22 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    22) ¿Toma o a tomado anticonceptivos?¿Por cuanto tiempo?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio22" id="si22" />
+                  <label class="lblPregunta" for="si22">Si</label>
+                  <input
+                    type="radio"
+                    name="radio22"
+                    id="no22"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no22">No</label>
+                </div>
+
+                <!-- Pregunta 23 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    23) ¿Presenta alguna molestia o dolor en la mamas?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio23" id="si23" />
+                  <label class="lblPregunta" for="si23">Si</label>
+                  <input
+                    type="radio"
+                    name="radio23"
+                    id="no23"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no23">No</label>
+                </div>
+
+                <div class="titulo bloc3">¿Cómo considera su nivel de?</div>
+                <!-- NIVELES DE ENERGIA -->
+                <div class="campo-estrella">
+                  <div class="label">
+                    ¿Cómo considera su salud?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <div class="star-rating">
+                    <!-- <p>Puntuación</p> -->
+                    <button id="star" class="star-salud">&#9734;</button>
+                    <button id="star" class="star-salud">&#9734;</button>
+                    <button id="star" class="star-salud">&#9734;</button>
+                    <button id="star" class="star-salud">&#9734;</button>
+                    <button id="star" class="star-salud">&#9734;</button>
+                    <p class="rating-salud">Elegir</p>
+                  </div>
+                </div>
+                <!-- Condición fisica -->
+                <div class="campo-estrella">
+                  <div class="label">
+                    ¿Cómo considera su condición física?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <div class="star-rating">
+                    <!-- <p>Puntuación</p> -->
+                    <button id="star" class="star-fisico">&#9734;</button>
+                    <button id="star" class="star-fisico">&#9734;</button>
+                    <button id="star" class="star-fisico">&#9734;</button>
+                    <button id="star" class="star-fisico">&#9734;</button>
+                    <button id="star" class="star-fisico">&#9734;</button>
+                    <p class="rating-fisico">Elegir</p>
+                  </div>
+                </div>
+
+                <!-- Condición nutricional -->
+                <div class="campo-estrella">
+                  <div class="label">
+                    ¿Cómo considera su condición nutricional?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <div class="star-rating">
+                    <!-- <p>Puntuación</p> -->
+                    <button id="star" class="star-nutricion">&#9734;</button>
+                    <button id="star" class="star-nutricion">&#9734;</button>
+                    <button id="star" class="star-nutricion">&#9734;</button>
+                    <button id="star" class="star-nutricion">&#9734;</button>
+                    <button id="star" class="star-nutricion">&#9734;</button>
+                    <p class="rating-nutricion">Elegir</p>
+                  </div>
+                </div>
+
+                <!-- Condición Estres -->
+                <div class="campo-estrella">
+                  <div class="label">
+                    ¿Cómo considera su condición de estrés?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <div class="star-rating">
+                    <!-- <p>Puntuación</p> -->
+                    <button id="star" class="star-estres">&#9734;</button>
+                    <button id="star" class="star-estres">&#9734;</button>
+                    <button id="star" class="star-estres">&#9734;</button>
+                    <button id="star" class="star-estres">&#9734;</button>
+                    <button id="star" class="star-estres">&#9734;</button>
+                    <p class="rating-estres">Elegir</p>
+                  </div>
+                </div>
+
+                <div class="campo btns bloc3">
+                  <button class="volver-pag3 volver">Atras</button>
+                  <button class="adelante-pag5 adelante">Siguiente</button>
+                </div>
+              </div>
+            </div>
+            <!-- PAGINA NO 5 CONTROL NUTRICIÓN-->
+            <div class="pagina">
+              <div class="gridpagina">
+                <div class="titulo bloc3">Nutrición</div>
+                <!-- Peso -->
+                <div class="campo">
+                  <div class="label">
+                    Peso <b class="error" id="usuario-error"></b>
+                  </div>
+                  <input type="text" id="usuario" placeholder="Peso"  />
+                </div>
+
+                <!-- Grasa Corporal -->
+                <div class="campo">
+                  <div class="label">
+                    Porcentaje Grasa Corporal<b
+                      class="error"
+                      id="usuario-error"
+                    ></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="usuario"
+                    placeholder="Porcentaje grasa corporal"
+                    pattern="^[0-9]+" min="1" step="0.01"
+                    />
+                </div>
+
+                <!-- Agua -->
+                <div class="campo">
+                  <div class="label">
+                    Porcentaje Agua <b class="error" id="usuario-error"></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="usuario"
+                    placeholder="Porcentaje Agua"
+                    pattern="^[0-9]+" min="1" step="0.01"
+                  />
+                </div>
+
+                <!-- Masa Muscular-->
+                <div class="campo">
+                  <div class="label">
+                    Masa Muscular<b class="error" id="usuario-error"></b>
+                  </div>
+                  <input type="text" id="usuario" placeholder="Masa Muscular"  pattern="^[0-9]+" min="1" />
+                </div>
+
+                <!-- Valor Físico-->
+                <div class="campo">
+                  <div class="label">
+                    Valor Físico <b class="error" id="usuario-error"></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="usuario"
+                    placeholder="Valor Físico"
+                    pattern="^[0-9]+" min="1"
+                   />
+                </div>
+
+                <!-- Metabolismo Basal -->
+                <div class="campo">
+                  <div class="label">
+                    Metabolismo Basal<b class="error" id="usuario-error"></b>
+                  </div>
+                  <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Metabolismo Basal"
+                  
+                  />
+                </div>
+
+                <!-- Edad Metabolica-->
+                <div class="campo">
+                  <div class="label">
+                    Edad Metabolica <b class="error" id="usuario-error"></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="usuario"
+                    placeholder="Edad Metabolica"
+                    pattern="^[0-9]+" min="1"
+                  />
+                </div>
+
+                <!-- Masa Ósea-->
+                <div class="campo">
+                  <div class="label">
+                    Masa Ósea<b class="error" id="usuario-error"></b>
+                  </div>
+                  <input type="number" id="usuario" placeholder="Masa Ósea"  pattern="^[0-9]+" min="1" />
+                </div>
+
+                <!-- Grasa Visceral-->
+                <div class="campo">
+                  <div class="label">
+                    Grasa Visceral <b class="error" id="usuario-error"></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="usuario"
+                    placeholder="Grasa Visceral"
+                    pattern="^[0-9]+" min="1"
+                  />
+                </div>
+
+                <div class="campo btns bloc3">
+                  <button class="volver-pag4 volver">Atras</button>
+                  <button class="adelante-pag6 adelante">Siguiente</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAGINA NO 6 CONTROL MEDIDAS CORPORALES -->
+            <div class="pagina">
+              <div class="gridpagina">
+                <div class="titulo bloc3">Datos Generales</div>
+
+                <!-- Pectoral -->
+                <div class="campo">
+                  <div class="label">
+                    Pectoral <b class="error" id="nombres-error"></b>
+                  </div>
+                  <input type="number" id="nombres" placeholder="Pectoral"  pattern="^[0-9]+" min="1" step="0.01" />
+                </div>
+
+                <!-- Dorsal -->
+                <div class="campo">
+                  <div class="label">
+                    Dorsal <b class="error" id="apellido1-error"></b>
+                  </div>
+                  <input type="number" id="apellido1" placeholder="Dorsal"  pattern="^[0-9]+" min="1" step="0.01" />
+                </div>
+
+                <!-- Biceps-->
+                <div class="campo">
+                  <div class="label">
+                    Biceps
+                    <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input type="number" id="apellido2" placeholder="Biceps"  pattern="^[0-9]+" min="1" step="0.01" />
+                </div>
+
+                <!-- Antebrazos-->
+                <div class="campo">
+                  <div class="label">
+                    Antebrazos
+                    <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="apellido2"
+                    placeholder="Antebrazos"
+                    pattern="^[0-9]+" min="1" step="0.01"
+                  />
+                </div>
+
+                <!-- Cintura -->
+                <div class="campo">
+                  <div class="label">
+                    Cintura <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input type="number" id="apellido2" placeholder="Cintura"  pattern="^[0-9]+" min="1" step="0.01"/>
+                </div>
+
+                <!-- Cadera-->
+                <div class="campo">
+                  <div class="label">
+                    Cadera<b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input type="number" id="apellido2" placeholder="Cintura"  pattern="^[0-9]+" min="1" step="0.01" />
+                </div>
+
+                <!-- Muslo -->
+                <div class="campo">
+                  <div class="label">
+                    Muslo<b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input type="number" id="apellido2" placeholder="Muslo"  pattern="^[0-9]+" min="1" step="0.01"/>
+                </div>
+
+                <!-- Pantorrilla -->
+                <div class="campo">
+                  <div class="label">
+                    Pantorrilla <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="apellido2"
+                    placeholder="Pantorrilla"
+                    pattern="^[0-9]+" min="1" step="0.01"
+                  />
+                </div>
+
+                <div class="campo sigPag bloc3">
+                  <button class="volver-pag5 volver">Atras</button>
+                  <button class="Fin">Finalizar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <!-- imagen -->
+      <img class="image-container" src="image/g1.jpg" alt="" />
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/movimiento.js"></script>
+    <script src="js/condicion.js"></script>
+  </body>
+</html>
+
+<!-- <i class="fa-solid fa-circle-xmark"></i>
+<i class="fa-solid fa-square-xmark"></i>
+-->
+<!-- CLOSE -->
