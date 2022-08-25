@@ -132,7 +132,7 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .form-princi form .pagina .grid3 {
-  width: 100%;
+  width: 98%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -171,6 +171,10 @@ body {
   text-align: left;
   width: 100%;
 }
+input[type="date"],
+input[type="time"] {
+  -webkit-appearance: none;
+}
 
 .form-princi form .pagina .campo input {
   width: 90%;
@@ -199,7 +203,7 @@ body {
 }
 
 .form-princi form .pagina .campo select {
-  width: 95%;
+  width: 98%;
   height: 100%;
   padding-left: 15px;
   font-size: 16px;
@@ -279,23 +283,24 @@ form .pagina .btns button.adelante {
   position: relative;
   width: 20px;
   height: 20px;
-  border: 2px solid rgb(5, 5, 5);
+  border: 2px solid #0072ff;
   border-radius: 5px;
+  background: #0072ff;
   display: inline-block;
   font-weight: 500;
-  padding: 2px 2px;
-  /* line-height: 4px; */
+  padding: 3px 3px;
   font-size: 11px;
   transition: 0.2s;
 }
 .progress-bar .paso .num.active {
   border-color: var(--celfu);
-  background: #0072ff;
+  /* background: #0072ff; */
+  background: var(--celfu);
 }
 .progress-bar .paso .num span {
   font-weight: 500;
   font-size: 15px;
-  line-height: 22px;
+  line-height: 20px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -311,28 +316,38 @@ form .pagina .btns button.adelante {
 .progress-bar .paso .check {
   display: none;
   position: absolute;
+  width: 20px;
+  height: 20px;
   left: 50%;
   top: 70%;
   font-weight: bold;
-  font-size: 17px;
+  padding: none;
+  line-height: 15px;
+  font-size: 18px;
   transform: translate(-50%, -50%);
 }
 .progress-bar .paso .check.active {
   display: block;
   font-weight: bold;
   background: var(--celfu);
-  color: white;
+  /* background: var(--celfu); */
+  color: black;
 }
 
 .progress-bar .paso .num::before,
 .progress-bar .paso .num::after {
   position: absolute;
   content: "";
-  width: 80px;
+  width: 310%;
   height: 1px;
   bottom: 11px;
-  right: -80px;
-  background: black;
+  right: -296%;
+  background: #0072ff;
+  /* width: 77px;
+  height: 1px;
+  bottom: 11px;
+  right: -77px;
+  background:#f35b3f; */
 }
 
 .progress-bar .paso:last-child .num::before,
@@ -346,7 +361,6 @@ form .pagina .btns button.adelante {
   transform: scaleX(0);
   height: 2px;
   transform-origin: left;
-  background: var(--celfu);
 }
 
 @keyframes mov_Linea {
@@ -399,7 +413,6 @@ input[type="radio"] {
   cursor: pointer;
   margin-top: 10px;
   margin-right: 6px;
-
 }
 
 .lblPregunta::before {
@@ -447,6 +460,7 @@ input[type="radio"]:checked + .lblPregunta::before {
 } */
 
 #star {
+  margin-top: 5px;
   font-size: 30px;
   color: gold;
   background-color: unset;
@@ -484,7 +498,7 @@ input[type="radio"]:checked + .lblPregunta::before {
 .form-princi form .pagina .campo-pregunta .label {
   position: absolute;
   top: -25px;
-  font-weight: 530;
+  font-weight: 500;
   font-size: 14px;
   text-align: justify;
   float: left;
@@ -518,6 +532,7 @@ input[type="radio"]:checked + .lblPregunta::before {
 @media (min-width: 992px) and (max-width: 1199px) {
 }
 
+/* IPAD TABLET */
 @media (min-width: 720px) and (max-width: 991px) {
   .container {
     margin: 0;
@@ -532,30 +547,36 @@ input[type="radio"]:checked + .lblPregunta::before {
   .image-container {
     display: none;
   }
+  .progress-bar .paso .check {
+    line-height: 30px;
+  }
   .progress-bar .paso .num::before,
   .progress-bar .paso .num::after {
     position: absolute;
     content: "";
-    width: 95px;
+    width: 93px;
     height: 1px;
     bottom: 11px;
-    right: -96px;
-    background: black;
+    right: -94px;
+    background: #0072ff;
   }
   .progress-bar .paso p {
-    font-size: 14px;
+    margin-left: 4px;
+    font-size: 17px;
   }
 
   .form-princi form .pagina .campo .label {
-    font-size: 14px;
+    font-size: 16px;
   }
-
+  .form-princi form .pagina .campo-estrella .label {
+    font-size: 18px;
+  }
   .form-princi form .pagina .campo-estrella .star-rating {
     margin-top: 10px;
     padding: 0;
   }
   .form-princi form .pagina .campo-pregunta .label {
-    font-size: 11px;
+    font-size: 16px;
   }
   .form-princi form .pagina .campo-pregunta {
     height: 34px;
@@ -632,7 +653,7 @@ input[type="radio"]:checked + .lblPregunta::before {
     height: 1px;
     bottom: 11px;
     right: -48px;
-    background: black;
+    background: #0072ff;
   }
   .form-princi form .pagina .campo-pregunta .label {
     font-size: 11px;
@@ -674,14 +695,17 @@ input[type="radio"]:checked + .lblPregunta::before {
     height: 1px;
     bottom: 11px;
     right: -37px;
-    background: black;
+    background:#0072ff;
+  }
+
+  .form-princi form .pagina .campo-pregunta {
+    margin: 23px 0;
+    height: 38px;
   }
   .form-princi form .pagina .campo-pregunta .label {
-    font-size: 11px;
-    line-height: 12px;
-  }
-  .form-princi form .pagina .campo-pregunta {
-    height: 32px;
+    font-size: 13px;
+    top: -32px;
+    line-height: 10.5px;
   }
   .info-container header {
     font-size: 12px;
@@ -690,6 +714,7 @@ input[type="radio"]:checked + .lblPregunta::before {
     font-size: 11px;
   }
   .lblPregunta {
+    height: 15px;
     font-size: 10px;
     padding: 0 5px;
     line-height: 10px;
@@ -697,5 +722,13 @@ input[type="radio"]:checked + .lblPregunta::before {
   .lblPregunta::before {
     width: 4px;
     height: 4px;
+  }
+  .form-princi form .pagina .grid3 {
+    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-princi form .pagina .grid3 .bloc3 {
+    grid-column: 1 / 3;
   }
 }

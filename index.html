@@ -23,35 +23,35 @@
         </header>
         <div class="progress-bar">
           <div class="paso">
-            <p>Información General </p>
+            <p>Información General</p>
             <div class="num"><span>1</span></div>
             <div class="check">
               <i class="fa-solid fa-check"></i>
             </div>
           </div>
           <div class="paso">
-            <p>Historial Clinico 1</p>
+            <p> Historial Clínico .1</p>
             <div class="num"><span>2</span></div>
             <div class="check">
               <i class="fa-solid fa-check"></i>
             </div>
           </div>
           <div class="paso">
-            <p>Historial Clinico 2</p>
+            <p> Historial Clínico .2</p>
             <div class="num"><span>3</span></div>
             <div class="check">
               <i class="fa-solid fa-check"></i>
             </div>
           </div>
           <div class="paso">
-            <p>Condición energía</p>
+            <p>Condiciones energía</p>
             <div class="num"><span>4</span></div>
             <div class="check">
               <i class="fa-solid fa-check"></i>
             </div>
           </div>
           <div class="paso">
-            <p>Control de Nutición</p>
+            <p>Control de Nutrición</p>
             <div class="num"><span>5</span></div>
             <div class="check">
               <!-- <i class="fa-solid fa-file-circle-check"></i> -->
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="paso">
-            <p>Medidad Corporales</p>
+            <p>Medidas Corporales</p>
             <div class="num"><span>6</span></div>
             <div class="check">
               <!-- <i class="fa-solid fa-file-circle-check"></i> -->
@@ -88,11 +88,7 @@
                   <div class="label">
                     Apellidos <b class="error" id="apellido1-error"></b>
                   </div>
-                  <input
-                    type="text"
-                    id="apellido1"
-                    placeholder="Apellidos"
-                  />
+                  <input type="text" id="apellido1" placeholder="Apellidos" />
                 </div>
 
                 <!-- Correo Electrónico -->
@@ -107,29 +103,34 @@
                     placeholder="Correo Electrónico"
                   />
                 </div>
-                  <!-- Fecha Nacimiento -->
-                  <div class="campo">
-                    <div class="label">
-                      Fecha Nacimiento <b class="error" id="apellido2-error"></b>
-                    </div>
-                    <input
-                      type="date"
-                      id="apellido2"
-                      placeholder="Apellido Materno"
-                    />
+                <!-- Fecha Nacimiento -->
+                <div class="campo">
+                  <div class="label">
+                    Fecha Nacimiento <b class="error" id="apellido2-error"></b>
                   </div>
-                
-                 
+                  <input
+                    type="date"
+                    id="txtfechaNacimiento"
+              
+                  />
+                </div>
+
                 <!-- Estatura -->
                 <div class="campo">
                   <div class="label">
                     Estatura
-                    <b class="error" id="apellido2-error"  ></b>
+                    <b class="error" id="apellido2-error"></b>
                   </div>
-                  <input type="number" id="apellido2" pattern="^[0-9]+" min="1" step="0.01" placeholder="Estatura" />
+                  <input
+                    type="number"
+                    id="apellido2"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                    placeholder="Estatura"
+                  />
                 </div>
-                
-             
+
                 <!-- Teléfono -->
                 <div class="campo">
                   <div class="label">
@@ -143,7 +144,7 @@
                   />
                 </div>
               </div>
-                <div class="grid3">
+              <div class="grid3">
                 <!-- Sexo -->
                 <div class="campo">
                   <div class="label">
@@ -165,9 +166,14 @@
                     Edad
                     <b class="error" id="apellido2-error"></b>
                   </div>
-                  <input type="number" id="apellido2" placeholder="Edad" readonly />
+                  <input
+                    type="text"
+                    id="txtEdad"
+                    placeholder="Edad"
+                    readonly
+                  />
                 </div>
-              
+
                 <!-- Fecha Inicio -->
                 <div class="campo">
                   <div class="label">
@@ -395,8 +401,6 @@
                   <label class="lblPregunta" for="no10">No</label>
                 </div>
 
-            
-
                 <div class="campo btns bloc3">
                   <button class="volver-pag1 volver">Atras</button>
                   <button class="adelante-pag3 adelante">Siguiente</button>
@@ -408,38 +412,38 @@
             <div class="pagina pagHistorial">
               <div class="gridpagina">
                 <div class="titulo bloc3">Historial Clínico - Parte 2</div>
-                    <!-- Pregunta 11 -->
-                    <div class="campo-pregunta">
-                      <div class="label">
-                        11) ¿Fuma? <b class="error" id="numCel-error"></b>
-                      </div>
-                      <input type="radio" name="radio11" id="si11" />
-                      <label class="lblPregunta" for="si11">Si</label>
-                      <input
-                        type="radio"
-                        name="radio11"
-                        id="no11"
-                        checked="checked"
-                      />
-                      <label class="lblPregunta" for="no11">No</label>
-                    </div>
-    
-                    <!-- Pregunta 12 -->
-                    <div class="campo-pregunta">
-                      <div class="label">
-                        12) ¿Cosume alcohol frecuentemente?
-                        <b class="error" id="numCel-error"></b>
-                      </div>
-                      <input type="radio" name="radio12" id="si12" />
-                      <label class="lblPregunta" for="si12">Si</label>
-                      <input
-                        type="radio"
-                        name="radio12"
-                        id="no12"
-                        checked="checked"
-                      />
-                      <label class="lblPregunta" for="no12">No</label>
-                    </div>
+                <!-- Pregunta 11 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    11) ¿Fuma? <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio11" id="si11" />
+                  <label class="lblPregunta" for="si11">Si</label>
+                  <input
+                    type="radio"
+                    name="radio11"
+                    id="no11"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no11">No</label>
+                </div>
+
+                <!-- Pregunta 12 -->
+                <div class="campo-pregunta">
+                  <div class="label">
+                    12) ¿Cosume alcohol frecuentemente?
+                    <b class="error" id="numCel-error"></b>
+                  </div>
+                  <input type="radio" name="radio12" id="si12" />
+                  <label class="lblPregunta" for="si12">Si</label>
+                  <input
+                    type="radio"
+                    name="radio12"
+                    id="no12"
+                    checked="checked"
+                  />
+                  <label class="lblPregunta" for="no12">No</label>
+                </div>
                 <!-- Pregunta 13 -->
                 <div class="campo-pregunta">
                   <div class="label">
@@ -599,7 +603,7 @@
             <div class="pagina">
               <div class="gridpagina">
                 <div class="titulo bloc3">Condiciones de energía</div>
-                
+
                 <!-- Pregunta 21 -->
                 <div class="campo-pregunta">
                   <div class="label">
@@ -656,7 +660,7 @@
                 <!-- NIVELES DE ENERGIA -->
                 <div class="campo-estrella">
                   <div class="label">
-                    ¿Cómo considera su salud?
+                    1) ¿Cómo considera su salud?
                     <b class="error" id="numCel-error"></b>
                   </div>
                   <div class="star-rating">
@@ -672,7 +676,7 @@
                 <!-- Condición fisica -->
                 <div class="campo-estrella">
                   <div class="label">
-                    ¿Cómo considera su condición física?
+                    2) ¿Cómo considera su condición física?
                     <b class="error" id="numCel-error"></b>
                   </div>
                   <div class="star-rating">
@@ -689,7 +693,7 @@
                 <!-- Condición nutricional -->
                 <div class="campo-estrella">
                   <div class="label">
-                    ¿Cómo considera su condición nutricional?
+                    3) ¿Cómo considera su condición nutricional?
                     <b class="error" id="numCel-error"></b>
                   </div>
                   <div class="star-rating">
@@ -706,7 +710,7 @@
                 <!-- Condición Estres -->
                 <div class="campo-estrella">
                   <div class="label">
-                    ¿Cómo considera su condición de estrés?
+                    4) ¿Cómo considera su condición de estrés?
                     <b class="error" id="numCel-error"></b>
                   </div>
                   <div class="star-rating">
@@ -735,13 +739,13 @@
                   <div class="label">
                     Peso <b class="error" id="usuario-error"></b>
                   </div>
-                  <input type="text" id="usuario" placeholder="Peso"  />
+                  <input type="text" id="usuario" placeholder="Peso" />
                 </div>
 
                 <!-- Grasa Corporal -->
                 <div class="campo">
                   <div class="label">
-                    Porcentaje Grasa Corporal<b
+                    Grasa Corporal<b
                       class="error"
                       id="usuario-error"
                     ></b>
@@ -749,9 +753,11 @@
                   <input
                     type="number"
                     id="usuario"
-                    placeholder="Porcentaje grasa corporal"
-                    pattern="^[0-9]+" min="1" step="0.01"
-                    />
+                    placeholder="Grasa corporal"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
 
                 <!-- Agua -->
@@ -763,7 +769,9 @@
                     type="number"
                     id="usuario"
                     placeholder="Porcentaje Agua"
-                    pattern="^[0-9]+" min="1" step="0.01"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
                   />
                 </div>
 
@@ -772,7 +780,13 @@
                   <div class="label">
                     Masa Muscular<b class="error" id="usuario-error"></b>
                   </div>
-                  <input type="text" id="usuario" placeholder="Masa Muscular"  pattern="^[0-9]+" min="1" />
+                  <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Masa Muscular"
+                    pattern="^[0-9]+"
+                    min="1"
+                  />
                 </div>
 
                 <!-- Valor Físico-->
@@ -784,8 +798,9 @@
                     type="number"
                     id="usuario"
                     placeholder="Valor Físico"
-                    pattern="^[0-9]+" min="1"
-                   />
+                    pattern="^[0-9]+"
+                    min="1"
+                  />
                 </div>
 
                 <!-- Metabolismo Basal -->
@@ -797,7 +812,6 @@
                     type="text"
                     id="usuario"
                     placeholder="Metabolismo Basal"
-                  
                   />
                 </div>
 
@@ -810,7 +824,8 @@
                     type="number"
                     id="usuario"
                     placeholder="Edad Metabolica"
-                    pattern="^[0-9]+" min="1"
+                    pattern="^[0-9]+"
+                    min="1"
                   />
                 </div>
 
@@ -819,7 +834,13 @@
                   <div class="label">
                     Masa Ósea<b class="error" id="usuario-error"></b>
                   </div>
-                  <input type="number" id="usuario" placeholder="Masa Ósea"  pattern="^[0-9]+" min="1" />
+                  <input
+                    type="number"
+                    id="usuario"
+                    placeholder="Masa Ósea"
+                    pattern="^[0-9]+"
+                    min="1"
+                  />
                 </div>
 
                 <!-- Grasa Visceral-->
@@ -831,7 +852,8 @@
                     type="number"
                     id="usuario"
                     placeholder="Grasa Visceral"
-                    pattern="^[0-9]+" min="1"
+                    pattern="^[0-9]+"
+                    min="1"
                   />
                 </div>
 
@@ -846,13 +868,34 @@
             <div class="pagina">
               <div class="gridpagina">
                 <div class="titulo bloc3">Datos Generales</div>
-
+                <!-- Estatura -->
+                <div class="campo">
+                  <div class="label">
+                    Estatura
+                    <b class="error" id="apellido2-error"></b>
+                  </div>
+                  <input
+                    type="number"
+                    id="apellido2"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                    placeholder="Estatura"
+                  />
+                </div>
                 <!-- Pectoral -->
                 <div class="campo">
                   <div class="label">
                     Pectoral <b class="error" id="nombres-error"></b>
                   </div>
-                  <input type="number" id="nombres" placeholder="Pectoral"  pattern="^[0-9]+" min="1" step="0.01" />
+                  <input
+                    type="number"
+                    id="nombres"
+                    placeholder="Pectoral"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
 
                 <!-- Dorsal -->
@@ -860,7 +903,14 @@
                   <div class="label">
                     Dorsal <b class="error" id="apellido1-error"></b>
                   </div>
-                  <input type="number" id="apellido1" placeholder="Dorsal"  pattern="^[0-9]+" min="1" step="0.01" />
+                  <input
+                    type="number"
+                    id="apellido1"
+                    placeholder="Dorsal"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
 
                 <!-- Biceps-->
@@ -869,7 +919,14 @@
                     Biceps
                     <b class="error" id="apellido2-error"></b>
                   </div>
-                  <input type="number" id="apellido2" placeholder="Biceps"  pattern="^[0-9]+" min="1" step="0.01" />
+                  <input
+                    type="number"
+                    id="apellido2"
+                    placeholder="Biceps"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
 
                 <!-- Antebrazos-->
@@ -882,7 +939,9 @@
                     type="number"
                     id="apellido2"
                     placeholder="Antebrazos"
-                    pattern="^[0-9]+" min="1" step="0.01"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
                   />
                 </div>
 
@@ -891,7 +950,14 @@
                   <div class="label">
                     Cintura <b class="error" id="apellido2-error"></b>
                   </div>
-                  <input type="number" id="apellido2" placeholder="Cintura"  pattern="^[0-9]+" min="1" step="0.01"/>
+                  <input
+                    type="number"
+                    id="apellido2"
+                    placeholder="Cintura"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
 
                 <!-- Cadera-->
@@ -899,7 +965,14 @@
                   <div class="label">
                     Cadera<b class="error" id="apellido2-error"></b>
                   </div>
-                  <input type="number" id="apellido2" placeholder="Cintura"  pattern="^[0-9]+" min="1" step="0.01" />
+                  <input
+                    type="number"
+                    id="apellido2"
+                    placeholder="Cintura"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
 
                 <!-- Muslo -->
@@ -907,7 +980,14 @@
                   <div class="label">
                     Muslo<b class="error" id="apellido2-error"></b>
                   </div>
-                  <input type="number" id="apellido2" placeholder="Muslo"  pattern="^[0-9]+" min="1" step="0.01"/>
+                  <input
+                    type="number"
+                    id="apellido2"
+                    placeholder="Muslo"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
                 </div>
 
                 <!-- Pantorrilla -->
@@ -919,7 +999,9 @@
                     type="number"
                     id="apellido2"
                     placeholder="Pantorrilla"
-                    pattern="^[0-9]+" min="1" step="0.01"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
                   />
                 </div>
 

@@ -16,6 +16,39 @@ const progressText = document.querySelectorAll(".paso p");
 const progressCheck = document.querySelectorAll(".paso .check");
 const Num = document.querySelectorAll(".paso .num");
 const btn_cancelar = document.querySelector(".btn_cancelar");
+const FechaNacimiento = document.getElementById("txtfechaNacimiento");
+const edad = document.getElementById("txtEdad");
+
+const calcularEdad = (FechaNacimiento) => {
+  const fechaActual = new Date();
+  const anoActual = parseInt(fechaActual.getFullYear());
+  const mesActual = parseInt(fechaActual.getMonth()) + 1;
+  const diaActual = parseInt(fechaActual.getDate());
+
+  // 2016-07-11
+  const anoNacimiento = parseInt(String(FechaNacimiento).substring(0, 4));
+  const mesNacimiento = parseInt(String(FechaNacimiento).substring(5, 7));
+  const diaNacimiento = parseInt(String(FechaNacimiento).substring(8, 10));
+
+  let edad = anoActual - anoNacimiento;
+  if (mesActual < mesNacimiento) {
+    edad--;
+  } else if (mesActual === mesNacimiento) {
+    if (diaActual < diaNacimiento) {
+      edad--;
+    }
+  }
+  return edad;
+};
+
+window.addEventListener("load", function () {
+  FechaNacimiento.addEventListener("change", function () {
+    if (this.value) {
+      edad.value = `${calcularEdad(this.value)}`;
+      edad.style.fontWeight="bold";
+    }
+  });
+});
 
 // const Pagina = document.getElementById("InfoCont");
 
@@ -25,13 +58,14 @@ btn_cancelar.addEventListener("click", function (e) {
   e.preventDefault();
 
   Swal.fire({
-    title: "¿Estás seguro de querer Cancelar el registro?",
+    title: "¿Desea cancelar el registro?",
     text: "Se perderán los datos, si es que ya llenó algunos.",
     icon: "warning",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Sí, deseo salir.",
+    confirmButtonColor: "#0072ff",
+    cancelButtonColor: "#D2122E",
+    cancelButtonText:"Cancelar",
+    confirmButtonText: "Sí, deseo salir",
   }).then((result) => {
     if (result.value) {
       // location.href="inicio.html"

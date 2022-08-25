@@ -2,6 +2,29 @@
 const allStars_salud = document.querySelectorAll(".star-salud");
 let rating_salud = document.querySelector(".rating-salud");
 
+
+// function calcularEdad(fechaNacimiento) {
+//   var hoy = new Date();
+//   var cumpleanos = new Date(fechaNacimiento);
+//   let edad = hoy.getFullYear() - cumpleanos.getFullYear();
+//   var m = hoy.getMonth() - cumpleanos.getMonth();
+
+//   if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+//     edad--;
+//   }
+
+//   return edad;
+// }
+// window.addEventListener('load', function () {
+//   Fecha_Nacimiento.addEventListener('change', function () {
+//     if (this.value) {
+//       edad.innerText = `${calcularEdad(this.value)}`;
+//     }
+//   });
+// });
+
+// document.getElementById("txt-edad").textContent = calcularEdad(fecha);
+
 allStars_salud.forEach((star, i) => {
   star.addEventListener("click", function (e) {
     e.preventDefault();
