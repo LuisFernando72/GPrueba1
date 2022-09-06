@@ -52,7 +52,9 @@ body {
   padding: 0 22px 0 22px;
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
- 
+  box-shadow: -3px 2px 7px 1px rgba(19, 19, 19, 0.8);
+  -webkit-box-shadow: -3px 2px 7px 1px rgba(38,36,36,0.8);
+  -moz-box-shadow: -3px 2px 7px 1px rgba(38,36,36,0.8);
   /* border: #f2ecec 3px solid; */
   box-sizing: border-box;
 }
@@ -68,9 +70,9 @@ body {
   background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
   /* border: #f2ecec 3px solid; */
   /* box-shadow: 0 0 10px 0 #000; */
-  box-shadow: 3px 2px 7px 1px rgba(38,36,36,0.8);
-  -webkit-box-shadow: 3px 2px 7px 1px rgba(38,36,36,0.8);
-  -moz-box-shadow: 3px 2px 7px 1px rgba(38,36,36,0.8);
+  box-shadow: 3px 2px 7px 1px rgba(3, 3, 3, 0.9);
+  -webkit-box-shadow: 3px 2px 7px 1px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 3px 2px 7px 1px rgba(5, 5, 5, 0.8);
   box-sizing: border-box;
 
 }

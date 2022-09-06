@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="css/estilo.css" />
     <script src="library/cdnjs/sweetalert2.min.js"></script>
     <script src="library/fontawesome-free-6.1.2-web/js/all.min.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/82af7fe597.js" crossorigin="anonymous"></script> -->
     <script src="js/jqueri3.6.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -30,14 +34,14 @@
             </div>
           </div>
           <div class="paso">
-            <p> Historial Clínico 1</p>
+            <p>Historial Clínico 1</p>
             <div class="num"><span>2</span></div>
             <div class="check">
               <i class="fa-solid fa-check"></i>
             </div>
           </div>
           <div class="paso">
-            <p> Historial Clínico 2</p>
+            <p>Historial Clínico 2</p>
             <div class="num"><span>3</span></div>
             <div class="check">
               <i class="fa-solid fa-check"></i>
@@ -67,7 +71,8 @@
             </div>
           </div>
         </div>
-
+        <!-- Inicio formulario
+cd -->
         <div class="form-princi">
           <form action="#">
             <!-- PAGINA NO 1 DATOS GENERALES -->
@@ -79,142 +84,209 @@
                 <!-- Nombres -->
                 <div class="campo">
                   <div class="label">
-                    Nombres <b class="error" id="nombres-error"></b>
+                    Nombres <b class="error" id="txtnombresCliente-error"></b>
                   </div>
-                  <input type="text" id="nombres" placeholder="Nombres" />
+
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="txtnombresCliente"
+                    placeholder="Nombres"
+                  />
                 </div>
+
                 <!-- Apellidos -->
                 <div class="campo">
                   <div class="label">
-                    Apellidos <b class="error" id="apellido1-error"></b>
+                    Apellidos
+                    <b class="error" id="txtxapellidosCliente-error"></b>
                   </div>
-                  <input type="text" id="apellido1" placeholder="Apellidos" />
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="txtxapellidoCliente"
+                    placeholder="Apellidos"
+                  />
                 </div>
 
                 <!-- Correo Electrónico -->
                 <div class="campo">
                   <div class="label">
                     Correo Electrónico
-                    <b class="error" id="apellido2-error"></b>
+                    <b class="error" id="txtcorreoCliente-error"></b>
                   </div>
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-envelope" aria-hidden="true"></i
+                  ></span>
                   <input
                     type="text"
-                    id="apellido2"
+                    id="txtcorreoCliente"
                     placeholder="Correo Electrónico"
                   />
                 </div>
                 <!-- Fecha Nacimiento -->
                 <div class="campo">
                   <div class="label">
-                    Fecha Nacimiento <b class="error" id="apellido2-error"></b>
+                    Fecha Nacimiento
+                    <b class="error" id="txtfechaNacimiento-error"></b>
                   </div>
-                  <input
-                    type="date"
-                    id="txtfechaNacimiento"
-              
-                  />
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-calendar" aria-hidden="true"></i
+                  ></span>
+                  <input type="date" id="txtfechaNacimiento" />
                 </div>
 
                 <!-- Estatura -->
                 <div class="campo">
                   <div class="label">
                     Estatura
-                    <b class="error" id="apellido2-error"></b>
+                    <b class="error" id="txtEstatura-error"></b>
                   </div>
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
                   <input
                     type="number"
-                    id="apellido2"
+                    id="txtEstatura"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                     placeholder="Estatura"
+                    style="
+                      border-right: 0;
+                      border-bottom-right-radius: 0;
+                      border-top-right-radius: 0;
+                    "
                   />
-                </div>
-
-                <!-- Teléfono -->
-                <div class="campo">
-                  <div class="label">
-                    No. Teléfono
-                    <b class="error" id="apellido2-error"></b>
+                  <div class="medida">
+                    <select
+                      id="txtmedida"
+                      style="border-left: 0; margin: 0 22px 0 0"
+                    >
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
                   </div>
-                  <input
-                    type="text"
-                    id="apellido2"
-                    placeholder="No. Teléfono"
-                  />
                 </div>
-              </div>
-              <div class="grid3">
                 <!-- Sexo -->
                 <div class="campo">
                   <div class="label">
                     Sexo<b class="error" id="sexo-error"></b>
                   </div>
-                  <select name="sexo" id="sexo">
-                    <option value="-1" disabled selected>
-                      Escoge una opcion
-                    </option>
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-angle-double-down" aria-hidden="true"></i
+                  ></span>
+                  <select name="sexo" id="txtsexo">
+                    <option value="-1" disabled selected>Seleccionar</option>
                     <option value="0">Masculino</option>
                     <option value="1">Femenino</option>
                     <option value="2">Otro</option>
                   </select>
                 </div>
-
+              </div>
+              <div class="grid3">
+                <!-- Teléfono -->
+                <div class="campo">
+                  <div class="label">
+                    No. Teléfono
+                    <b class="error" id="txtTelefono-error"></b>
+                  </div>
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    style="padding-left: 42px"
+                    type="tel"
+                    id="txtTelefono"
+                  />
+                </div>
                 <!-- Edad -->
                 <div class="campo">
                   <div class="label">
                     Edad
-                    <b class="error" id="apellido2-error"></b>
+                    <b class="error" id="txtEdad-error"></b>
                   </div>
-                  <input
-                    type="text"
-                    id="txtEdad"
-                    placeholder="Edad"
-                    readonly
-                  />
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
+                  <input type="text" id="txtEdad" placeholder="Edad" readonly />
                 </div>
 
                 <!-- Fecha Inicio -->
                 <div class="campo">
                   <div class="label">
-                    Fecha Inicio <b class="error" id="apellido2-error"></b>
+                    Fecha Inicio <b class="error" id="txtfechaInicio-error"></b>
                   </div>
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-calendar" aria-hidden="true"></i
+                  ></span>
                   <input
                     type="date"
-                    id="apellido2"
+                    id="txtfechaInicio"
                     placeholder="Apellido Materno"
                   />
                 </div>
-              </div>
-              <div class="grid3">
+                <!-- </div>
+
+              <div class="grid3"> -->
                 <div class="titulo bloc3">Datos Emergencia</div>
 
                 <!-- Nombres -->
                 <div class="campo">
                   <div class="label">
-                    Nombres <b class="error" id="nombres-error"></b>
+                    Nombres
+                    <b class="error" id="txtnombresEmergencia-error"></b>
                   </div>
-                  <input type="text" id="nombres" placeholder="Nombres" />
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="txtnombresEmergencia"
+                    placeholder="Nombres"
+                  />
                 </div>
 
                 <!-- Apellidos -->
                 <div class="campo">
                   <div class="label">
-                    Apellidos <b class="error" id="apellido1-error"></b>
+                    Apellidos
+                    <b class="error" id="txtapellidosEmergencia-error"></b>
                   </div>
-                  <input type="text" id="apellido1" placeholder="Apellidos" />
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="txtapellidosEmergencia"
+                    placeholder="Apellidos"
+                  />
                 </div>
 
                 <!-- Teléfono -->
                 <div class="campo">
                   <div class="label">
-                    No. Teléfono<b class="error" id="fechaNac-error"></b>
+                    No. Teléfono<b
+                      class="error"
+                      id="txttelefonoEmergencia-error"
+                    ></b>
                   </div>
-                  <input type="text" id="fechaNac" placeholder="No. Telefono" />
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-text-height" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    style="padding-left: 42px"
+                    type="text"
+                    id="txttelefonoEmergencia"
+                  />
                 </div>
-
-                <div class="campo sigPag bloc3"><button>Siguiente</button></div>
               </div>
+              <div class="campo sigPag bloc3"><button id="btn_sisguiente" disabled>Siguiente</button></div>
             </div>
             <!-- FIN FORM -->
 
@@ -605,7 +677,8 @@
                 <div class="titulo bloc3">Condiciones de energía</div>
 
                 <!-- Pregunta 21 -->
-                <div class="campo-pregunta">
+              
+                <div class="campo-pregunta ocultar">
                   <div class="label">
                     21) ¿Esta usted embarazada, lactando o considera la
                     posibilidad de estarlo?
@@ -623,7 +696,7 @@
                 </div>
 
                 <!-- Pregunta 22 -->
-                <div class="campo-pregunta">
+                <div class="campo-pregunta ocultar">
                   <div class="label">
                     22) ¿Toma o a tomado anticonceptivos?¿Por cuanto tiempo?
                     <b class="error" id="numCel-error"></b>
@@ -640,7 +713,7 @@
                 </div>
 
                 <!-- Pregunta 23 -->
-                <div class="campo-pregunta">
+                <div class="campo-pregunta ocultar">
                   <div class="label">
                     23) ¿Presenta alguna molestia o dolor en la mamas?
                     <b class="error" id="numCel-error"></b>
@@ -655,6 +728,7 @@
                   />
                   <label class="lblPregunta" for="no23">No</label>
                 </div>
+              
 
                 <div class="titulo bloc3">¿Cómo considera su nivel de?</div>
                 <!-- NIVELES DE ENERGIA -->
@@ -735,126 +809,225 @@
               <div class="gridpagina">
                 <div class="titulo bloc3">Nutrición</div>
                 <!-- Peso -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Peso <b class="error" id="usuario-error"></b>
+                    Peso <b class="error" id="peso-error"></b>
                   </div>
-                  <input type="text" id="usuario" placeholder="Peso" />
+                  <span id="icoError" class="input-icon"
+                    ><i class="fa fa-krw" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="number"
+                    id="txtPeso"
+                    placeholder="Peso"
+                    pattern="^[0-9]+"
+                    min="1"
+                    step="0.01"
+                  />
+
+                  <div class="medida">
+                    <select n id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
-                <!-- Grasa Corporal -->
-                <div class="campo">
+                <!-- Grasa campo -->
+                <div class="campo-medida">
                   <div class="label">
-                    Grasa Corporal<b
-                      class="error"
-                      id="usuario-error"
-                    ></b>
+                    Grasa Corporal<b class="error" id="grasa-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
                     type="number"
-                    id="usuario"
+                    id="txtGrasa"
                     placeholder="Grasa corporal"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Agua -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Porcentaje Agua <b class="error" id="usuario-error"></b>
+                    Porcentaje Agua <b class="error" id="agua-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
                     type="number"
-                    id="usuario"
+                    id="txt_aguaPorc"
                     placeholder="Porcentaje Agua"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Masa Muscular-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Masa Muscular<b class="error" id="usuario-error"></b>
+                    Masa Muscular<b class="error" id="masa-error"></b>
+                  </div>
+
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
-                    type="text"
-                    id="usuario"
+                    type="number"
+                    id="txtMasaM"
                     placeholder="Masa Muscular"
                     pattern="^[0-9]+"
                     min="1"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Valor Físico-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Valor Físico <b class="error" id="usuario-error"></b>
+                    Valor Físico <b class="error" id="fisicoV-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
                     type="number"
-                    id="usuario"
+                    id="txtFisicoV"
                     placeholder="Valor Físico"
                     pattern="^[0-9]+"
                     min="1"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Metabolismo Basal -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Metabolismo Basal<b class="error" id="usuario-error"></b>
+                    Metabolismo Basal<b
+                      class="error"
+                      id="metabolismoB-error"
+                    ></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
                     type="text"
-                    id="usuario"
+                    id="txtMetabolismoB"
                     placeholder="Metabolismo Basal"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Edad Metabolica-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Edad Metabolica <b class="error" id="usuario-error"></b>
+                    Edad Metabolica <b class="error" id="edadMet-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
                     type="number"
-                    id="usuario"
+                    id="txtEdadMet"
                     placeholder="Edad Metabolica"
                     pattern="^[0-9]+"
                     min="1"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Masa Ósea-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Masa Ósea<b class="error" id="usuario-error"></b>
+                    Masa Ósea<b class="error" id="masaOs-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
                     type="number"
-                    id="usuario"
+                    id="txtMasaOsea"
                     placeholder="Masa Ósea"
                     pattern="^[0-9]+"
                     min="1"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Grasa Visceral-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Grasa Visceral <b class="error" id="usuario-error"></b>
+                    Grasa Visceral <b class="error" id="grasaVi-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa fa-percent" aria-hidden="true"></i>
                   </div>
                   <input
                     type="number"
-                    id="usuario"
+                    id="txtGrasaVi"
                     placeholder="Grasa Visceral"
                     pattern="^[0-9]+"
                     min="1"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">Kg</option>
+                      <option value="1">km</option>
+                      <option value="2">kl</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div class="campo btns bloc3">
@@ -863,151 +1036,240 @@
                 </div>
               </div>
             </div>
+         
 
             <!-- PAGINA NO 6 CONTROL MEDIDAS CORPORALES -->
             <div class="pagina">
               <div class="gridpagina">
-                <div class="titulo bloc3">Datos Generales</div>
+                <div class="titulo bloc3">Medidas Corporales</div>
                 <!-- Estatura -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
                     Estatura
-                    <b class="error" id="apellido2-error"></b>
+                    <b class="error" id="estatura2-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido2"
-                    pattern="^[0-9]+"
-                    min="1"
-                    step="0.01"
+                    id="txtEstatura2"
+                    readonly
                     placeholder="Estatura"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
                 <!-- Pectoral -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Pectoral <b class="error" id="nombres-error"></b>
+                    Pectoral <b class="error" id="pectoral-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="nombres"
+                    id="txtPectoral"
                     placeholder="Pectoral"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Dorsal -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Dorsal <b class="error" id="apellido1-error"></b>
+                    Dorsal <b class="error" id="dorsal-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido1"
+                    id="txtDorsal"
                     placeholder="Dorsal"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Biceps-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
                     Biceps
-                    <b class="error" id="apellido2-error"></b>
+                    <b class="error" id="biceps-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido2"
+                    id="txtBiceps"
                     placeholder="Biceps"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Antebrazos-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
                     Antebrazos
-                    <b class="error" id="apellido2-error"></b>
+                    <b class="error" id="antebrazos-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido2"
+                    id="txtAntebrazos"
                     placeholder="Antebrazos"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Cintura -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Cintura <b class="error" id="apellido2-error"></b>
+                    Cintura <b class="error" id="cintura-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido2"
+                    id="txtCintura"
                     placeholder="Cintura"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Cadera-->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Cadera<b class="error" id="apellido2-error"></b>
+                    Cadera<b class="error" id="cadera-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido2"
+                    id="txtCadera"
                     placeholder="Cintura"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Muslo -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Muslo<b class="error" id="apellido2-error"></b>
+                    Muslo<b class="error" id="muslo-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido2"
+                    id="txtMuslo"
                     placeholder="Muslo"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Pantorrilla -->
-                <div class="campo">
+                <div class="campo-medida">
                   <div class="label">
-                    Pantorrilla <b class="error" id="apellido2-error"></b>
+                    Pantorrilla <b class="error" id="pantorrilla-error"></b>
+                  </div>
+                  <div id="icoError" class="input-icon">
+                    <i class="fa-solid fa-ruler"></i>
                   </div>
                   <input
                     type="number"
-                    id="apellido2"
+                    id="txtPantorrila"
                     placeholder="Pantorrilla"
                     pattern="^[0-9]+"
                     min="1"
                     step="0.01"
                   />
+                  <div class="medida">
+                    <select id="txtmedida">
+                      <option value="0">m</option>
+                      <option value="1">cm</option>
+                      <option value="2">mm</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="campo sigPag bloc3">
+                <div class="campo sigPag btns bloc3">
                   <button class="volver-pag5 volver">Atras</button>
-                  <button class="Fin">Finalizar</button>
+                  <button class="Fin adelante">Finalizar</button>
                 </div>
               </div>
             </div>
@@ -1017,11 +1279,11 @@
       </div>
 
       <!-- imagen -->
-      <img class="image-container" src="image/g1.jpg" alt="" />
+      <img class="image-container" src="image/g4.jpg" alt="" />
     </div>
-
+    <script src="library/momentLocale.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/movimiento.js"></script>
+
     <script src="js/condicion.js"></script>
   </body>
 </html>
