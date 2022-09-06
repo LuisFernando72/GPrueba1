@@ -52,7 +52,7 @@ body {
   padding: 0 22px 0 22px;
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
-  box-shadow: 0 0 10px 0 #000;
+ 
   /* border: #f2ecec 3px solid; */
   box-sizing: border-box;
 }
@@ -67,9 +67,12 @@ body {
   width: 38%;
   background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
   /* border: #f2ecec 3px solid; */
-  box-shadow: 0 0 10px 0 #000;
+  /* box-shadow: 0 0 10px 0 #000; */
+  box-shadow: 3px 2px 7px 1px rgba(38,36,36,0.8);
+  -webkit-box-shadow: 3px 2px 7px 1px rgba(38,36,36,0.8);
+  -moz-box-shadow: 3px 2px 7px 1px rgba(38,36,36,0.8);
   box-sizing: border-box;
-  /* border-radius: 20px; */
+
 }
 
 /* SOLO ESTILO SEGUNDA PASOS */
@@ -124,20 +127,28 @@ body {
   position: relative;
   width: 16.67%;
   transition: margin-left 0.2s ease-in-out;
+  /* display: grid;
+  gap: 0.2rem;
+  grid-auto-rows: 10rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); */
 }
 .form-princi form .pagina .gridpagina {
   width: 100%;
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 }
 .form-princi form .pagina .grid3 {
-  width: 98%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .form-princi form .pagina .grid3 .bloc3 {
+  position: relative;
   grid-column: 1 / 4;
+
+  padding: 0;
+  outline: 0;
 }
 
 .form-princi form .pagina .gridpagina .bloc3 {
@@ -152,75 +163,153 @@ body {
   margin: 0 0 12px 0;
 }
 
+.form-princi form .pagina .campo-medida,
 .form-princi form .pagina .campo {
-  height: 32px;
-  width: 100%;
-  margin: 20px 0;
-  display: flex;
   position: relative;
+  width: 99%;
+  display: flex;
+  height: 33px;
+  margin: 21px 0;
+  /* justify-content: flex-start; */
 }
+
+.form-princi form .pagina .campo-medida .label,
 .form-princi form .pagina .campo .label {
   position: absolute;
-  top: -25px;
-  padding: 0;
+  top: -24px;
+  padding-left: 8px;
   font-weight: 500;
   font-size: 16px;
   font-style: italic;
   text-align: justify;
   float: left;
+  display: block;
   text-align: left;
   width: 100%;
 }
-input[type="date"],
-input[type="time"] {
-  -webkit-appearance: none;
+.error {
+  position: absolute;
+  top: 60px;
+  float: right;
+
+  text-align: right;
+  font-size: 11px;
+  color: red;
+  display: block;
+}
+
+.form-princi form .pagina .campo-medida input {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: none;
+  font-size: 16px;
+  padding-left: 8px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
 }
 
 .form-princi form .pagina .campo input {
-  width: 90%;
+  position: relative;
+  width: 100%;
   height: 100%;
+  border: none;
+  /* margin: 0 3px 0 0; */
+  font-size: 16px;
+  padding-left: 8px;
   border: 1px solid gray;
   border-radius: 5px;
-  font-size: 16px;
-  padding-left: 15px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
-/* .form-princi form .pagina .campo input {
-  width: 90%;
-  height: 100%;
-  
-  background: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: rgb(37, 36, 36) 2px solid;
-  font-size: 16px;
-  padding-left: 15px;
+/* .form-princi form .pagina .campo select,
+.form-princi form .pagina .campo input {
+  outline: 0;
 } */
+.form-princi form .pagina .campo-medida .input-icon,
+.form-princi form .pagina .campo .input-icon {
+  height: 100%;
+  width: 12px;
+  font-size: 14px;
+  margin: 0 0 0 3px;
+  padding: 0 8px 0 5px;
+  background: rgb(75, 75, 75);
+  color: white;
+  border: 1px solid rgb(75, 75, 75);
+  border-right: 0;
+  line-height: 33px;
+  border-radius: 7px 0 0 7px;
+}
+
+.invalid {
+  display: block;
+  background: red !important;
+  border-color: red !important;
+  box-shadow: 0 3px 2px 0 rgb(129, 1, 1);
+}
+.valid {
+  display: block;
+  background: #ffe100 !important;
+  border-color: #00ff00 !important;
+  box-shadow: 0 4px 2px 0 rgb(1, 86, 8);
+}
+
 .form-princi form .pagina .campo input:hover {
-  border-color: #a9a9a9;
-  box-shadow: 0 2px 2px 0 #a9a9a9;
+  border-color: #353434;
+  /* box-shadow: 0 2px 2px 0 #a9a9a9; */
 }
 
 .form-princi form .pagina .campo select {
-  width: 98%;
-  height: 100%;
-  padding-left: 15px;
+  width: 100%;
+  height: calc(100% + 2px);
+  padding-left: 8px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  margin-right: 4px;
   border-radius: 5px;
+  border: 1px solid gray;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   /* border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: gray 2px solid; */
-  border: 1px solid gray;
 }
 
+.form-princi form .pagina .campo-medida .medida select {
+  width: 30px;
+  height: calc(100% + 2px);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin: 0 22px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid gray;
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.medidaf {
+  border-color: red !important;
+}
+
+.medidat {
+  border-color: #00ff00 !important;
+}
 .form-princi form .pagina .campo-pregunta button,
 .form-princi form .pagina .campo button {
-  justify-content: center;
+  position: relative;
   width: 100%;
   height: calc(100% + 10px);
+  justify-content: center;
   margin-top: -20px;
   border: none;
   background-image: linear-gradient(
@@ -229,19 +318,18 @@ input[type="time"] {
     #0072ff 51%,
     #00c6ff 100%
   );
+
   transition: 0.9s;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin: 0;
   background-size: 200% auto;
-  box-shadow: 0 0 3px rgb(107, 107, 107);
   border-radius: 6px;
   color: #fff;
   font-size: 17px;
   font-weight: 500;
-  display: block;
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .form-princi form .pagina .campo-pregunta button,
 .form-princi form .pagina .campo button:hover {
   background-position: right center; /* change the direction of the change here */
@@ -249,17 +337,25 @@ input[type="time"] {
   text-decoration: none;
 }
 
+button:disabled,
+button[disabled]{
+  border: none!important;
+  background: #989898 !important;
+  color: #f0ecec !important;
+}
+
+
 .form-princi form .pagina .btns button {
-  margin-top: -20px !important ;
+  margin-top: 0px !important ;
 }
 
 form .pagina .btns button.volver {
-  margin-right: 5px;
+  margin-right: 25px;
   font-size: 17px;
 }
 
 form .pagina .btns button.adelante {
-  margin-left: 5px;
+  margin-left: 25px;
 }
 
 .info-container .progress-bar {
@@ -283,19 +379,20 @@ form .pagina .btns button.adelante {
   position: relative;
   width: 20px;
   height: 20px;
-  border: 2px solid #0072ff;
+  border: 2px solid black;
   border-radius: 5px;
-  background: #0072ff;
+  background: black;
   display: inline-block;
+  color: white;
   font-weight: 500;
   padding: 3px 3px;
   font-size: 11px;
   transition: 0.2s;
 }
 .progress-bar .paso .num.active {
-  border-color: var(--celfu);
+  border-color: #00ff00;
   /* background: #0072ff; */
-  background: var(--celfu);
+  background: #00ff00;
 }
 .progress-bar .paso .num span {
   font-weight: 500;
@@ -310,7 +407,6 @@ form .pagina .btns button.adelante {
 }
 .progress-bar .paso p.active {
   color: black;
-
 }
 
 .progress-bar .paso .check {
@@ -329,7 +425,7 @@ form .pagina .btns button.adelante {
 .progress-bar .paso .check.active {
   display: block;
   font-weight: bold;
-  background: var(--celfu);
+
   /* background: var(--celfu); */
   color: black;
 }
@@ -342,7 +438,7 @@ form .pagina .btns button.adelante {
   height: 1px;
   bottom: 11px;
   right: -296%;
-  background: #0072ff;
+  background: black;
   /* width: 77px;
   height: 1px;
   bottom: 11px;
@@ -356,7 +452,7 @@ form .pagina .btns button.adelante {
 }
 
 .progress-bar .paso .num.active::after {
-  background: var(--celfu);
+  background: #00ff00;
   animation: mov_Linea 0.3s linear forwards;
   transform: scaleX(0);
   height: 2px;
@@ -526,6 +622,10 @@ input[type="radio"]:checked + .lblPregunta::before {
   font-size: 16px;
   padding-left: 15px;
 }
+input[type="date"],
+input[type="time"] {
+  -webkit-appearance: none;
+}
 
 /* MEDIAQUERIES */
 
@@ -558,7 +658,6 @@ input[type="radio"]:checked + .lblPregunta::before {
     height: 1px;
     bottom: 11px;
     right: -94px;
-    background: #0072ff;
   }
   .progress-bar .paso p {
     margin-left: 6px;
@@ -575,57 +674,15 @@ input[type="radio"]:checked + .lblPregunta::before {
     margin-top: 10px;
     padding: 0;
   }
-  .form-princi form .pagina .campo-pregunta .label {
-    font-size: 16px;
-  }
   .form-princi form .pagina .campo-pregunta {
-    height: 34px;
+    height: 40px;
+  }
+  .form-princi form .pagina .campo-pregunta .label {
+    font-size: 15px;
+    top: -20px;
+    line-height: 15px;
   }
 }
-
-/* @media (max-width: 767px) {
-  .container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .info-container {
-    width: 100%;
-    height: 100%;
-  }
-  .image-container {
-    display: none;
-  }  
-  .progress-bar .paso .num::before,
-  .progress-bar .paso .num::after {
-    position: absolute;
-    content: "";
-    width: 48px;
-    height: 1px;
-    bottom: 11px;
-    right: -48px;
-    background: black;
-  }
-  .progress-bar .paso p {
-    font-size: 14px;
-  }
-
-  .form-princi form .pagina .campo .label {
-    font-size: 14px;
-  }
-
-  .form-princi form .pagina .campo-estrella .star-rating {
-    margin-top: 10px;
-    padding: 0;
-  }
-  .form-princi form .pagina .campo-pregunta .label {
-    font-size: 11px;
-  }
-  .form-princi form .pagina .campo-pregunta {
-    height: 34px;
-  }
-} */
 
 @media (max-width: 710px) {
   .container {
@@ -653,19 +710,44 @@ input[type="radio"]:checked + .lblPregunta::before {
     height: 1px;
     bottom: 11px;
     right: -48px;
-    background: #0072ff;
   }
-  .form-princi form .pagina .campo-pregunta .label {
-    font-size: 11px;
-  }
+
   .form-princi form .pagina .campo-pregunta {
-    height: 34px;
+    height: 50px;
+  }
+
+  .form-princi form .pagina .campo-pregunta .label {
+    font-size: 12px;
+    top: -20px;
+    line-height: 14px;
+  }
+  .lblPregunta {
+    margin-top: 22px;
+    height: 15px;
+    font-size: 10px;
+    padding: 4px 5px;
+    line-height: 10px;
   }
   .info-container header {
     font-size: 14px;
   }
   .form-princi form .pagina .campo-estrella .label {
     font-size: 12px;
+  }
+  .form-princi form .pagina .grid3 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-princi form .pagina .grid3 .bloc3 {
+    grid-column: 1 / 3;
+  }
+  .form-princi form .pagina .campo-medida .medida select {
+    font-size: 13px;
+  }
+  .form-princi form .pagina .campo input {
+    position: relative;
+    width: 100%;
   }
 }
 
@@ -696,7 +778,7 @@ input[type="radio"]:checked + .lblPregunta::before {
     height: 1px;
     bottom: 11px;
     right: -37px;
-    background:#0072ff;
+    background: #0072ff;
   }
 
   .form-princi form .pagina .campo-pregunta {
@@ -725,14 +807,15 @@ input[type="radio"]:checked + .lblPregunta::before {
     height: 4px;
   }
   .form-princi form .pagina .grid3 {
-    width: 98%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .form-princi form .pagina .grid3 .bloc3 {
     grid-column: 1 / 3;
   }
   .progress-bar .paso p {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
