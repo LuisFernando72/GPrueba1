@@ -35,17 +35,15 @@ body {
   height: 100%;
   align-items: center;
   overflow-y: auto;
-
-  background: rgb(5, 195, 187);
+  background: rgb(0, 238, 188);
   background: linear-gradient(
-    130deg,
-    rgba(5, 195, 187, 1) 1%,
-    rgba(5, 195, 187, 1) 15%,
-    rgba(255, 255, 255, 1) 19%,
-    rgba(255, 255, 255, 1) 51%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(5, 195, 187, 1) 85%,
-    rgba(5, 195, 187, 1) 99%
+    135deg,
+    rgba(0, 238, 188, 1) 0%,
+    rgba(0, 238, 188, 1) 5%,
+    rgba(255, 255, 255, 1) 24%,
+    rgba(255, 255, 255, 1) 76%,
+    rgba(0, 238, 188, 1) 95%,
+    rgba(0, 238, 188, 1) 100%
   );
 
   text-align: center;
@@ -53,8 +51,8 @@ body {
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
   box-shadow: -3px 2px 7px 1px rgba(19, 19, 19, 0.8);
-  -webkit-box-shadow: -3px 2px 7px 1px rgba(38,36,36,0.8);
-  -moz-box-shadow: -3px 2px 7px 1px rgba(38,36,36,0.8);
+  -webkit-box-shadow: -3px 2px 7px 1px rgba(38, 36, 36, 0.8);
+  -moz-box-shadow: -3px 2px 7px 1px rgba(38, 36, 36, 0.8);
   /* border: #f2ecec 3px solid; */
   box-sizing: border-box;
 }
@@ -74,7 +72,6 @@ body {
   -webkit-box-shadow: 3px 2px 7px 1px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 3px 2px 7px 1px rgba(5, 5, 5, 0.8);
   box-sizing: border-box;
-
 }
 
 /* SOLO ESTILO SEGUNDA PASOS */
@@ -192,11 +189,9 @@ body {
 .error {
   position: absolute;
   top: 60px;
-  float: right;
-
-  text-align: right;
-  font-size: 11px;
+  font-size: 12px;
   color: red;
+  font-style: italic;
   display: block;
 }
 
@@ -339,13 +334,105 @@ body {
   text-decoration: none;
 }
 
+/* Progressbar */
+.progressbar {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin-bottom: 15px;
+  counter-reset: step;
+  align-content: center;
+}
+
+.progressbar__option {
+  position: relative;
+  width: 100%;
+  font-size: 15px;
+  margin: 2px;
+  align-content: center;
+}
+
+.progressbar .progressbar__option p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin: auto;  */
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 5px;
+  transition: 0.2s;
+  bottom: 15px;
+}
+
+.progressbar__option:before {
+  display: flex;
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  padding: 2.5px;
+  margin: 0 auto 5px;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 18px;
+  z-index: 2;
+  color: white;
+}
+
+.progressbar__option:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 30px;
+  left: -50%;
+  z-index: 1;
+}
+
+.progressbar .progressbar__option .check {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 100%;
+  font-weight: bold;
+  line-height: 15px;
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.progressbar__option:first-child:after {
+  content: none;
+}
+
+.progressbar__option.active:before,
+.progressbar__option.active:after {
+  border-color: #00c6fb;
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+  color: black;
+  font-weight: bold;
+}
+.step.active {
+  opacity: 1;
+}
+
 button:disabled,
-button[disabled]{
-  border: none!important;
+button[disabled] {
+  border: none !important;
   background: #989898 !important;
   color: #f0ecec !important;
 }
-
 
 .form-princi form .pagina .btns button {
   margin-top: 0px !important ;
@@ -360,113 +447,7 @@ form .pagina .btns button.adelante {
   margin-left: 25px;
 }
 
-.info-container .progress-bar {
-  display: flex;
-  margin-bottom: 12px;
-}
-
-.info-container .progress-bar .paso {
-  text-align: center;
-  width: 100%;
-  position: relative;
-}
-.progress-bar .paso p {
-  font-size: 11px;
-  font-weight: 500;
-  color: #000;
-  margin-bottom: 5px;
-  transition: 0.2s;
-}
-.progress-bar .paso .num {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  border: 2px solid black;
-  border-radius: 5px;
-  background: black;
-  display: inline-block;
-  color: white;
-  font-weight: 500;
-  padding: 3px 3px;
-  font-size: 11px;
-  transition: 0.2s;
-}
-.progress-bar .paso .num.active {
-  border-color: #00ff00;
-  /* background: #0072ff; */
-  background: #00ff00;
-}
-.progress-bar .paso .num span {
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.progress-bar .paso .num.active span {
-  display: none;
-}
-.progress-bar .paso p.active {
-  color: black;
-}
-
-.progress-bar .paso .check {
-  display: none;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 50%;
-  top: 70%;
-  font-weight: bold;
-  padding: none;
-  line-height: 15px;
-  font-size: 18px;
-  transform: translate(-50%, -50%);
-}
-.progress-bar .paso .check.active {
-  display: block;
-  font-weight: bold;
-
-  /* background: var(--celfu); */
-  color: black;
-}
-
-.progress-bar .paso .num::before,
-.progress-bar .paso .num::after {
-  position: absolute;
-  content: "";
-  width: 310%;
-  height: 1px;
-  bottom: 11px;
-  right: -296%;
-  background: black;
-  /* width: 77px;
-  height: 1px;
-  bottom: 11px;
-  right: -77px;
-  background:#f35b3f; */
-}
-
-.progress-bar .paso:last-child .num::before,
-.progress-bar .paso:last-child .num::after {
-  display: none;
-}
-
-.progress-bar .paso .num.active::after {
-  background: #00ff00;
-  animation: mov_Linea 0.3s linear forwards;
-  transform: scaleX(0);
-  height: 2px;
-  transform-origin: left;
-}
-
-@keyframes mov_Linea {
-  100% {
-    transform: scaleX(1);
-  }
-}
-
+/* AQUI TERMINA */
 /* ESTILO MOSTRAR CONTRA */
 .ojitos {
   position: absolute;
@@ -649,18 +630,7 @@ input[type="time"] {
   .image-container {
     display: none;
   }
-  .progress-bar .paso .check {
-    line-height: 30px;
-  }
-  .progress-bar .paso .num::before,
-  .progress-bar .paso .num::after {
-    position: absolute;
-    content: "";
-    width: 93px;
-    height: 1px;
-    bottom: 11px;
-    right: -94px;
-  }
+
   .progress-bar .paso p {
     margin-left: 6px;
     font-size: 16px;
@@ -772,7 +742,7 @@ input[type="time"] {
     font-weight: 600;
     left: 94%;
   }
-  .progress-bar .paso .num::before,
+  /* .progress-bar .paso .num::before,
   .progress-bar .paso .num::after {
     position: absolute;
     content: "";
@@ -781,7 +751,7 @@ input[type="time"] {
     bottom: 11px;
     right: -37px;
     background: #0072ff;
-  }
+  } */
 
   .form-princi form .pagina .campo-pregunta {
     margin: 23px 0;
@@ -819,5 +789,13 @@ input[type="time"] {
   }
   .progress-bar .paso p {
     font-size: 11px;
+  }
+  .error {
+    font-size: 8.2px;
+    line-height: 12px;
+  }
+  .image-container,
+  .info-container {
+    border-radius: 0;
   }
 }

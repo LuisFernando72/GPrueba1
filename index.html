@@ -22,10 +22,55 @@
         <div class="btn_cancelar" title="Cancelar">
           <i class="fa-solid fa-circle-xmark ex"></i>
         </div>
+
         <header>
           Ficha técnica de clientes y programa(s) de entrenamiento sugerido(s)
         </header>
-        <div class="progress-bar">
+
+        <div class="progressbar">
+
+          <div class="progressbar__option">
+            <p>Información General</p>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="progressbar__option">
+            <p>Historial Clínico 1</p>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="progressbar__option">
+            <p>Historial Clínico 2</p>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="progressbar__option">
+            <p>Información General</p>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="progressbar__option">
+            <p>Historial Clínico 1</p>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <div class="progressbar__option">
+            <p>Historial Clínico 2</p>
+            <div class="check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <!-- <li class="progressbar__option"><p>paso1</p></li>
+          <li class="progressbar__option"><p>paso1</p></li>
+          <li class="progressbar__option"><p>paso1</p></li> -->
+        </div>
+
+        <!-- <div class="progress-bar">
           <div class="paso">
             <p>Información General</p>
             <div class="num"><span>1</span></div>
@@ -58,7 +103,6 @@
             <p>Control de Nutrición</p>
             <div class="num"><span>5</span></div>
             <div class="check">
-              <!-- <i class="fa-solid fa-file-circle-check"></i> -->
               <i class="fa-solid fa-check"></i>
             </div>
           </div>
@@ -66,18 +110,16 @@
             <p>Medidas Corporales</p>
             <div class="num"><span>6</span></div>
             <div class="check">
-              <!-- <i class="fa-solid fa-file-circle-check"></i> -->
               <i class="fa-solid fa-check"></i>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- Inicio formulario
 cd -->
         <div class="form-princi">
           <form action="#">
             <!-- PAGINA NO 1 DATOS GENERALES -->
             <div class="pagina movPag">
-              <!-- <div id="Layer1" style="width:100px; height:115px; overflow: scroll;"></div> -->
               <div class="gridpagina">
                 <div class="titulo bloc3">Datos Generales</div>
 
@@ -165,7 +207,12 @@ cd -->
                   <div class="medida">
                     <select
                       id="txtmedida"
-                      style="border-left: 0; margin: 0 22px 0 0"
+                      style="
+                        border-left: 0;
+                        margin: 0 26px 0 0;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                      "
                     >
                       <option value="0">m</option>
                       <option value="1">cm</option>
@@ -196,7 +243,10 @@ cd -->
                     No. Teléfono
                     <b class="error" id="txtTelefono-error"></b>
                   </div>
-                  <span id="icoError" class="input-icon"
+                  <span
+                    style="height: calc(100% - 2px)"
+                    id="icoError"
+                    class="input-icon"
                     ><i class="fa fa-text-height" aria-hidden="true"></i
                   ></span>
                   <input
@@ -276,7 +326,10 @@ cd -->
                       id="txttelefonoEmergencia-error"
                     ></b>
                   </div>
-                  <span id="icoError" class="input-icon"
+                  <span
+                    style="height: calc(100% - 2px)"
+                    id="icoError"
+                    class="input-icon"
                     ><i class="fa fa-text-height" aria-hidden="true"></i
                   ></span>
                   <input
@@ -286,7 +339,9 @@ cd -->
                   />
                 </div>
               </div>
-              <div class="campo sigPag bloc3"><button id="btn_sisguiente" disabled>Siguiente</button></div>
+              <div class="campo sigPag bloc3">
+                <button id="btn_sisguiente">Siguiente</button>
+              </div>
             </div>
             <!-- FIN FORM -->
 
@@ -677,7 +732,7 @@ cd -->
                 <div class="titulo bloc3">Condiciones de energía</div>
 
                 <!-- Pregunta 21 -->
-              
+
                 <div class="campo-pregunta ocultar">
                   <div class="label">
                     21) ¿Esta usted embarazada, lactando o considera la
@@ -728,7 +783,6 @@ cd -->
                   />
                   <label class="lblPregunta" for="no23">No</label>
                 </div>
-              
 
                 <div class="titulo bloc3">¿Cómo considera su nivel de?</div>
                 <!-- NIVELES DE ENERGIA -->
@@ -1036,7 +1090,6 @@ cd -->
                 </div>
               </div>
             </div>
-         
 
             <!-- PAGINA NO 6 CONTROL MEDIDAS CORPORALES -->
             <div class="pagina">

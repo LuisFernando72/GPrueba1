@@ -82,11 +82,12 @@ const btn_atras4 = document.querySelector(".volver-pag4");
 const btn_adelante6 = document.querySelector(".adelante-pag6");
 const btn_atras5 = document.querySelector(".volver-pag5");
 const btn_final = document.querySelector(".Fin");
-const progressText = document.querySelectorAll(".paso p");
-const progressCheck = document.querySelectorAll(".paso .check");
-const Num = document.querySelectorAll(".paso .num");
+// const progressText = document.querySelectorAll(".paso p");
+// const progressCheck = document.querySelectorAll(".paso .check");
+// const Num = document.querySelectorAll(".paso .num");
 const Siguiente = document.getElementById("btn_sisguiente");
 const btn_cancelar = document.querySelector(".btn_cancelar");
+let progressOptions = document.querySelectorAll(".progressbar__option");
 // let arrarV = [];
 let max = 4;
 let cont = 1;
@@ -124,6 +125,8 @@ function calcularEdad(txtfechaNacimiento) {
 
   return edad;
 }
+
+
 window.addEventListener("load", function () {
   txtfechaNacimiento.addEventListener("change", function () {
     if (this.value) {
@@ -335,7 +338,7 @@ const validatePhoneNumberI = (contador, error, phone, e) => {
   const field = e.target;
   const fieldValue = e.target.value;
   const field_id = e.target.id;
-  // const phone2 = phoneInput.getNumber();
+  const phone2 = phone.getNumber();
   if (phone.isValidNumber()) {
     icon_error[contador].classList.remove("invalid");
     field.style.borderColor = "#00ff00";
@@ -359,6 +362,7 @@ const validatePhoneNumberI = (contador, error, phone, e) => {
     error.innerHTML = "";
     errores[field_id] = false;
   }
+  console.log(phone2);
   submitController();
 };
 
@@ -409,9 +413,16 @@ const validateSelect = (contador, error, e) => {
   submitController();
 };
 
-txtcorreoCliente.addEventListener("blur", (e) => validateEmailB(2, error_correoCliente, e));
-txtcorreoCliente.addEventListener("input", (e) => validateEmailI(2, error_correoCliente, e));
+txtcorreoCliente.addEventListener("blur", (e) =>
+  validateEmailB(2, error_correoCliente, e)
+);
+txtcorreoCliente.addEventListener("input", (e) =>
+  validateEmailI(2, error_correoCliente, e)
+);
 
+txtfechaNacimiento.addEventListener("click", (e) =>
+  validatefieldWhite(3, error_Nacimiento, e)
+);
 txtfechaNacimiento.addEventListener("change", (e) =>
   validatefieldWhite(3, error_Nacimiento, e)
 );
@@ -422,6 +433,7 @@ txtEstatura.addEventListener("blur", (e) =>
 txtEstatura.addEventListener("input", (e) =>
   validateNumberFloat(4, 0, error_estatura, e)
 );
+txtsexo.addEventListener("click", (e) => validateSelect(5, error_sexo, e));
 txtsexo.addEventListener("change", (e) => validateSelect(5, error_sexo, e));
 
 txtTelefono.addEventListener("blur", (e) =>
@@ -510,7 +522,7 @@ GVisceral.addEventListener("input", (e) =>
 //ULTIMO FORMULARIO, MEDIDAS CORPORALES
 window.addEventListener("load", function () {
   txtEstatura.addEventListener("change", function () {
-    if (this.value == 9) {
+    if (this.value) {
       estatura2.value = txtEstatura.value;
       estatura2.style.borderColor = "#00ff00";
       medidaB[10].classList.add("medidat");
@@ -592,101 +604,105 @@ window.addEventListener("load", function () {
 btn_adelante2.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-16.67%";
-  Num[cont - 1].classList.add("active");
-  progressText[cont - 1].classList.add("active");
-  progressCheck[cont - 1].classList.add("active");
+  progressOptions[cont - 1].classList.add("active");
+  // Num[cont - 1].classList.add("active");
+  // progressText[cont - 1].classList.add("active");
+  // progressCheck[cont - 1].classList.add("active");
   cont += 1;
 });
 
 btn_adelante3.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-33.33%";
-  Num[cont - 1].classList.add("active");
-  progressText[cont - 1].classList.add("active");
-  progressCheck[cont - 1].classList.add("active");
+  progressOptions[cont - 1].classList.add("active");
+  // progressText[cont - 1].classList.add("active");
+  // progressCheck[cont - 1].classList.add("active");
   cont += 1;
 });
 
 btn_adelante4.addEventListener("click", function (e) {
   e.preventDefault();
-
   movPag.style.marginLeft = "-50%";
-  Num[cont - 1].classList.add("active");
-  progressText[cont - 1].classList.add("active");
-  progressCheck[cont - 1].classList.add("active");
-  cont += 1;
+  progressOptions[cont - 1].classList.add("active");
+  // Num[cont - 1].classList.add("active");
+  // progressText[cont - 1].classList.add("active");
+  // progressCheck[cont - 1].classList.add("active");
+   cont += 1;
 });
 
 btn_adelante5.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-66.67%";
-  Num[cont - 1].classList.add("active");
-  progressText[cont - 1].classList.add("active");
-  progressCheck[cont - 1].classList.add("active");
-  cont += 1;
+  progressOptions[cont - 1].classList.add("active");
+  // Num[cont - 1].classList.add("active");
+  // progressText[cont - 1].classList.add("active");
+  // progressCheck[cont - 1].classList.add("active");
+   cont += 1;
 });
 btn_adelante6.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-83.33%";
-  Num[cont - 1].classList.add("active");
-  progressText[cont - 1].classList.add("active");
-  progressCheck[cont - 1].classList.add("active");
-  cont += 1;
+  progressOptions[cont - 1].classList.add("active");
+  // Num[cont - 1].classList.add("active");
+  // progressText[cont - 1].classList.add("active");
+  // progressCheck[cont - 1].classList.add("active");
+   cont += 1;
 });
 
 btn_final.addEventListener("click", function (e) {
   e.preventDefault();
-  Num[cont - 1].classList.add("active");
-  progressText[cont - 1].classList.add("active");
-  progressCheck[cont - 1].classList.add("active");
+  progressOptions[cont - 1].classList.add("active");
+  // Num[cont - 1].classList.add("active");
+  // progressText[cont - 1].classList.add("active");
+  // progressCheck[cont - 1].classList.add("active");
   cont += 1;
-  alert("FINALIZADO");
+   alert("FINALIZADO");
 });
 
 // BOTONES HACIA ATRAS
 btn_atras1.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "0%";
-  Num[cont - 2].classList.remove("active");
-  progressText[cont - 2].classList.remove("active");
-  progressCheck[cont - 2].classList.remove("active");
-  cont -= 1;
+  // Num[cont - 2].classList.remove("active");
+  // progressText[cont - 2].classList.remove("active");
+  // progressCheck[cont - 2].classList.remove("active");
+  // cont -= 1;
 });
 
 btn_atras2.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-16.67%";
-  Num[cont - 2].classList.remove("active");
-  progressText[cont - 2].classList.remove("active");
-  progressCheck[cont - 2].classList.remove("active");
-  cont -= 1;
+  // Num[cont - 2].classList.remove("active");
+  // progressText[cont - 2].classList.remove("active");
+  // progressCheck[cont - 2].classList.remove("active");
+  // cont -= 1;
 });
 
 btn_atras3.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-33.33%";
-  Num[cont - 2].classList.remove("active");
-  progressText[cont - 2].classList.remove("active");
-  progressCheck[cont - 2].classList.remove("active");
-  cont -= 1;
+  // Num[cont - 2].classList.remove("active");
+  // progressText[cont - 2].classList.remove("active");
+  // progressCheck[cont - 2].classList.remove("active");
+  // cont -= 1;
 });
 
 btn_atras4.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-50%";
-  Num[cont - 2].classList.remove("active");
-  progressText[cont - 2].classList.remove("active");
-  progressCheck[cont - 2].classList.remove("active");
-  cont -= 1;
+  // Num[cont - 2].classList.remove("active");
+  // progressText[cont - 2].classList.remove("active");
+  // progressCheck[cont - 2].classList.remove("active");
+  // cont -= 1;
 });
 
 btn_atras5.addEventListener("click", function (e) {
   e.preventDefault();
   movPag.style.marginLeft = "-66.67%";
-  Num[cont - 2].classList.remove("active");
-  progressText[cont - 2].classList.remove("active");
-  progressCheck[cont - 2].classList.remove("active");
-  cont -= 1;
+  // Num[cont - 2].classList.remove("active");
+  // progressText[cont - 2].classList.remove("active");
+  // progressCheck[cont - 2].classList.remove("active");
+  // cont -= 1;
 });
 
 // const AlertaFormValidacion = (e) => {
@@ -702,25 +718,25 @@ btn_atras5.addEventListener("click", function (e) {
 //   console.log("alerta");
 // };
 
-submitController = () => {
-  var boole;
-  if (
-    errores.txtnombresCliente ||
-    errores.txtxapellidoCliente ||
-    errores.txtcorreoCliente ||
-    errores.txtfechaNacimiento ||
-    errores.txtEstatura ||
-    errores.txtsexo ||
-    errores.txtTelefono ||
-    errores.txtnombresEmergencia ||
-    errores.txtapellidosEmergencia ||
-    errores.txttelefonoEmergencia
-  ) {
-    Siguiente.toggleAttribute("disabled", true);
-  } else {
-    Siguiente.toggleAttribute("disabled", false);
-  }
-};
+// submitController = () => {
+//   var boole;
+//   if (
+//     errores.txtnombresCliente ||
+//     errores.txtxapellidoCliente ||
+//     errores.txtcorreoCliente ||
+//     errores.txtfechaNacimiento ||
+//     errores.txtEstatura ||
+//     errores.txtsexo ||
+//     errores.txtTelefono ||
+//     errores.txtnombresEmergencia ||
+//     errores.txtapellidosEmergencia ||
+//     errores.txttelefonoEmergencia
+//   ) {
+//     Siguiente.toggleAttribute("disabled", true);
+//   } else {
+//     Siguiente.toggleAttribute("disabled", false);
+//   }
+// };
 
 // Siguiente.addEventListener("click", (e) => AlertaFormValidacion(e));
 // Siguiente.addEventListener("click", function (e) {
@@ -750,7 +766,7 @@ btn_cancelar.addEventListener("click", function (e) {
     confirmButtonText: "Sí, deseo salir",
   }).then((result) => {
     if (result.value) {
-     location.reload();
+      location.reload();
       limpiar();
     }
   });
@@ -760,12 +776,12 @@ function limpiar() {
   txtnombresCliente.value = "";
   txtxapellidoCliente.value = "";
   txtcorreoCliente.value = "";
-  txtfechaNacimiento.value="";
+  txtfechaNacimiento.value = "";
   txtEstatura.value = "";
   txtTelefono.value = "";
-  txtsexo.value=-1;
+  txtsexo.value = -1;
   edad.value = "";
-  fechaInicio.value="";
+  fechaInicio.value = "";
   txtnombresEmergencia.value = "";
   txtapellidosEmergencia.value = "";
   txttelefonoEmergencia.value = "";
