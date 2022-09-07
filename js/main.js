@@ -718,25 +718,25 @@ btn_atras5.addEventListener("click", function (e) {
 //   console.log("alerta");
 // };
 
-// submitController = () => {
-//   var boole;
-//   if (
-//     errores.txtnombresCliente ||
-//     errores.txtxapellidoCliente ||
-//     errores.txtcorreoCliente ||
-//     errores.txtfechaNacimiento ||
-//     errores.txtEstatura ||
-//     errores.txtsexo ||
-//     errores.txtTelefono ||
-//     errores.txtnombresEmergencia ||
-//     errores.txtapellidosEmergencia ||
-//     errores.txttelefonoEmergencia
-//   ) {
-//     Siguiente.toggleAttribute("disabled", true);
-//   } else {
-//     Siguiente.toggleAttribute("disabled", false);
-//   }
-// };
+submitController = () => {
+  var boole;
+  if (
+    errores.txtnombresCliente ||
+    errores.txtxapellidoCliente ||
+    errores.txtcorreoCliente ||
+    errores.txtfechaNacimiento ||
+    errores.txtEstatura ||
+    errores.txtsexo ||
+    errores.txtTelefono ||
+    errores.txtnombresEmergencia ||
+    errores.txtapellidosEmergencia ||
+    errores.txttelefonoEmergencia
+  ) {
+    Siguiente.toggleAttribute("disabled", true);
+  } else {
+    Siguiente.toggleAttribute("disabled", false);
+  }
+};
 
 // Siguiente.addEventListener("click", (e) => AlertaFormValidacion(e));
 // Siguiente.addEventListener("click", function (e) {
